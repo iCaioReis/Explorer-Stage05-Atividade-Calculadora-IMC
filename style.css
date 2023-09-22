@@ -24,9 +24,6 @@
     --bg-error: #F03E3E;
     --tt-error: white;
 }
-.hide{
-    display: none;
-}
 
 body {
     background-color: #040924;
@@ -159,9 +156,17 @@ form button:hover{
     padding: .8rem;
     background: var(--bg-error);
     text-align: center;
-    color: (--tt-error);
+    color: var(--tt-error);
     font-weight: 700;
 
     visibility: hidden;
+    transform: translateY(-30px);
+    transition: transform .5s;
     opacity: 0;
+}
+
+.alert-error.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
